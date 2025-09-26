@@ -1,0 +1,8 @@
+$ nmap -p 23 localhost
+
+Starting Nmap 7.80 ( https://nmap.org ) at 2025-09-26 12:42 UTC
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.000085s latency).
+
+PORT   STATE SERVICE
+23/tcp filtered telnet
