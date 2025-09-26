@@ -1,0 +1,45 @@
+🖥️ Option 1: Linux (UFW)
+
+1. Check if UFW is installed
+
+sudo apt update
+sudo apt install ufw -y
+
+2. Enable UFW
+
+sudo ufw enable
+
+> Type y if it asks for confirmation.
+
+
+
+3. Check Firewall Status
+
+sudo ufw status
+
+4. Block Inbound Traffic on Port 23 (Telnet)
+
+sudo ufw deny 23
+
+5. Test the Rule
+
+Try to connect:
+
+telnet localhost 23
+
+You should see: connection refused or not allowed.
+
+
+6. Allow SSH (Port 22)
+
+sudo ufw allow 22
+
+7. Remove the Telnet Rule
+
+sudo ufw delete deny 23
+
+8. Final Status
+
+sudo ufw status numbered
+
+📸 Take screenshots at each step (before, after adding rules, and testing).
